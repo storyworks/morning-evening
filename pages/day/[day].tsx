@@ -27,7 +27,11 @@ export default function Devo({ daily }) {
   });
 
   return (
-    <div style={{ background: "#8a9ebf" }}>
+    <div style={{ background: "#fff" }}>
+      <Toggle
+        check={devo.time === "pm"}
+        onClick={(value) => setDevo(daily.devo[value.checked ? 1 : 0])}
+      />
       <svg
         viewBox="0 0 40 16"
         height={width / 2.5}
@@ -39,26 +43,32 @@ export default function Devo({ daily }) {
             <stop
               offset="0%"
               style={{
-                stopColor: "#347993",
+                stopColor: devo.time === "am" ? "#fff" : "#347993",
                 stopOpacity: 1,
               }}
             />
             <stop
               offset="100%"
-              style={{ stopColor: "#6aabcc", stopOpacity: 1 }}
+              style={{
+                stopColor: devo.time === "am" ? "#6aabcc" : "#6aabcc",
+                stopOpacity: 1,
+              }}
             />
           </linearGradient>
           <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop
               offset="0%"
               style={{
-                stopColor: "#425691",
+                stopColor: devo.time === "am" ? "#425691" : "#425691",
                 stopOpacity: 1,
               }}
             />
             <stop
               offset="100%"
-              style={{ stopColor: "#8a9ebf", stopOpacity: 1 }}
+              style={{
+                stopColor: devo.time === "am" ? "#8a9ebf" : "#8a9ebf",
+                stopOpacity: 1,
+              }}
             />
           </linearGradient>
         </defs>
@@ -75,10 +85,7 @@ export default function Devo({ daily }) {
         <Head>
           <title>{`Day ${daily.day}`}</title>
         </Head>
-        <Toggle
-          check={devo.time === "pm"}
-          onClick={(value) => setDevo(daily.devo[value.checked ? 1 : 0])}
-        />
+
         <p>{devo.keyVerse}</p>
         <p>{devo.verseRef}</p>
         <p>{devo.body}</p>
