@@ -18,6 +18,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export default function Devo({ daily }) {
+  console.log(daily);
   const hour = new Date().getHours();
   const [devo, setDevo] = useState(daily.devo[hour <= 14 ? 0 : 1]);
   const [width, setWidth] = useState(0);

@@ -12,10 +12,8 @@ export default function Toggle({ check, onClick }) {
         className="dn"
         id="dn"
         checked={checked}
-        onClick={(value) => {
-          setChecked(!checked);
-          onClick(value.target);
-        }}
+        onChange={() => setChecked(!checked)}
+        onClick={(value) => onClick(value.target)}
       />
       <label htmlFor="dn" className={styles.toggle}>
         <span className={styles.toggleHandler}>

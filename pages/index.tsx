@@ -16,6 +16,10 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Home({ devotionals }) {
+  const date: any = new Date();
+  const startOfYear: any = new Date(date.getFullYear(), 0, 1);
+  const dayOfYear = Math.round((date - startOfYear) / (1000 * 60 * 60 * 24));
+
   return (
     <Layout home>
       <Head>
@@ -28,7 +32,7 @@ export default function Home({ devotionals }) {
         <h2 className={utilStyles.headingLg}>Devotional</h2>
         <ul className={utilStyles.list}>
           <li className={utilStyles.listItem} key={0}>
-            <Link href={`/day/1`}>
+            <Link href={`/day/${dayOfYear}`}>
               <a>Start</a>
             </Link>
           </li>
