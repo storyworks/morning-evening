@@ -3,13 +3,11 @@ import { useState, useEffect } from "react";
 import unified from 'unified'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
-import Link from "next/link";
 
 
 import Layout from "../../components/layout";
 import { getAllDevoIds, getDevo } from "../api/data";
 import { GetStaticProps, GetStaticPaths } from "next";
-import Toggle from "@components/DarkMode/Toggle";
 import styles from "./day.module.scss";
 
 
@@ -41,7 +39,7 @@ export default function Devo({ daily }) {
   }, [isEvening])
 
   return (
-     <Layout>
+     <Layout isDark={isEvening} setDark={setEvening}>
         <div style={{ margin: "0rem 1rem" }}>
       
         <Head>
@@ -61,18 +59,7 @@ export default function Devo({ daily }) {
         </div>
       </div>
         
-        <div className={styles.footer}>
-          <Link href="/">
-            <a>← Back to home</a>
-        </Link>
-        <Toggle
-        check={isEvening}
-          onClick={(value) => {
-            setEvening(value.checked)
-            window.scrollTo(0, 0);
-          }}
-      />
-      </div>
+
       
       </Layout>
   );

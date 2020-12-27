@@ -1,15 +1,16 @@
 import Head from "next/head";
-import styles from "./layout.module.css";
+import Link from "next/link";
+import Toggle from "@components/DarkMode/Toggle";
+
+import styles from "./layout.module.scss";
 import utilStyles from "@styles/utils.module.css";
 
 const name = "Your Name";
 export const siteTitle = "Next.js Sample Website";
 
-export default function Layout({ home = false, children }) {
-
-  
+const Layout = ({ home = false, children, isDark = false, setDark = undefined}) => {
   return (
-    <div className={styles.container}>
+    <div className={`${isDark ? styles.containerDark : styles.container}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -57,6 +58,22 @@ export default function Layout({ home = false, children }) {
         )} */}
       </header>
       <main>{children}</main>
+      {!home && 
+        <div className={styles.footer}>
+          <Link href="/">
+            <a>← Back to home</a>
+          </Link>
+          <Toggle
+          check={isDark}
+          onClick={(value) => {
+            setDark(value.checked)
+            window.scrollTo(0, 0);
+          }}
+          />
+      </div>
+      }
     </div>
   );
 }
+
+export default Layout;

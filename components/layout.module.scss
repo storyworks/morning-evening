@@ -1,0 +1,38 @@
+.container {
+  max-width: 36rem;
+  padding: 1rem 1rem 6rem;
+  font-family: "Literata", serif;
+}
+
+.containerDark {
+  max-width: 36rem;
+  padding: 1rem 1rem 6rem;
+  font-family: "Literata", serif;
+  color: white;
+  background-color: black;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 0 0;
+  font-family: "Lora", serif;
+  font-weight: 500;
+}
+
+.headerImage {
+  width: 6rem;
+  height: 6rem;
+}
+
+.headerHomeImage {
+  width: 8rem;
+  height: 8rem;
+}
