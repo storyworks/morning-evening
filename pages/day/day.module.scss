@@ -1,0 +1,39 @@
+.date {
+  display: flex;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.passage {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lora", serif;
+  font-weight: 500;
+  margin: 3rem 0rem;
+}
+
+.verse {
+  display: flex;
+  font-size: 24px;
+}
+
+.verseRef {
+  display: flex;
+  align-self: flex-end;
+  font-style: italic;
+}
+
+.content {
+  font-weight: 300;
+  margin: 2rem 0rem;
+}
+
+.footer {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 0 0;
+  font-family: "Lora", serif;
+  font-weight: 500;
+}
