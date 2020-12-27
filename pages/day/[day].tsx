@@ -67,7 +67,10 @@ export default function Devo({ daily }) {
         </Link>
         <Toggle
         check={isEvening}
-        onClick={(value) => setEvening(value.checked)}
+          onClick={(value) => {
+            setEvening(value.checked)
+            window.scrollTo(0, 0);
+          }}
       />
       </div>
       
