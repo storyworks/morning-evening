@@ -24,7 +24,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export default function Devo({ daily }) {
-  const date = new Date().toString();
   const hour = new Date().getHours();
   const [isEvening, setEvening] = useState(hour >= 15)
   const [devo, setDevo] = useState(daily.devo.content[isEvening ? 1 : 0]);

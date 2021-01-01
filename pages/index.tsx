@@ -18,7 +18,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({ devotionals }) {
   const date: any = new Date();
   const startOfYear: any = new Date(date.getFullYear(), 0, 1);
-  const dayOfYear = Math.round((date - startOfYear) / (1000 * 60 * 60 * 24));
+  const dayOfYear = Math.round((date - startOfYear) / (1000 * 60 * 60 * 24)+1);
 
   return (
     <Layout home>
