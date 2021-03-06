@@ -2,8 +2,8 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-import Layout, { siteTitle } from "@components/layout";
-import Sun from "@components/Sun"
+import {Layout, siteTitle } from "@components/index";
+import Sun from "@components/Animate/Sun"
 import { getAllDevoIds } from "./api/data";
 import utilStyles from "@styles/utils.module.css";
 

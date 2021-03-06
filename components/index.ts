@@ -1,1 +1,1 @@
-export { default } from "./layout"
+export { default as Layout, siteTitle } from "./Layout/Layout";

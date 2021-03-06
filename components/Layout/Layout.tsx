@@ -2,20 +2,19 @@ import Head from "next/head";
 import Link from "next/link";
 import Toggle from "@components/DarkMode/Toggle";
 
-import styles from "./layout.module.scss";
-import utilStyles from "@styles/utils.module.css";
+import styles from "./Layout.module.scss";
 
-const name = "Your Name";
-export const siteTitle = "Next.js Sample Website";
+export const siteTitle = "Morning & Evening Devotional";
 
-const Layout = ({ home = false, children, isDark = false, setDark = undefined}) => {
+const Layout = ({ home = false, children, isDark = false, setDark = undefined }) => {
+
   return (
     <div className={`${home ? styles.containerHome : isDark ? styles.containerNight : styles.containerDay}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          name="Morning & Evening ESV Devotional"
+          content="Charles Spurgeon Morning and Evening Devotional, edited by Alistair Begg. Crossway ESV."
         />
         <meta
           property="og:image"
@@ -25,12 +24,8 @@ const Layout = ({ home = false, children, isDark = false, setDark = undefined}) 
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
       </Head>
-      <header className={styles.header}>
-
-      </header>
       <main className={styles.main}>{children}</main>
       {!home && 
         <div className={styles.footer}>
