@@ -4,7 +4,7 @@ import unified from 'unified'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
 
-import Layout from "@components/Layout/layout";
+import Layout from "@components/Layout/Layout";
 import { getAllDevoIds, getDevo } from "../api/data";
 import { GetStaticProps, GetStaticPaths } from "next";
 import styles from "./day.module.scss";
