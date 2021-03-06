@@ -7,7 +7,8 @@ import styles from "./Layout.module.scss";
 export const siteTitle = "Morning & Evening Devotional";
 
 const Layout = ({ home = false, children, isDark = false, setDark = undefined }) => {
-
+  const defaultFontSize = { verse: 1.6, devo: 1 };
+  
   return (
     <div className={`${home ? styles.containerHome : isDark ? styles.containerNight : styles.containerDay}`}>
       <Head>
@@ -31,7 +32,8 @@ const Layout = ({ home = false, children, isDark = false, setDark = undefined })
         <div className={styles.footer}>
           <Link href="/">
             <a>← Back to home</a>
-          </Link>
+        </Link>
+        <div className={styles.settings}>
           <Toggle
           check={isDark}
           onClick={(value) => {
@@ -39,6 +41,7 @@ const Layout = ({ home = false, children, isDark = false, setDark = undefined })
             window.scrollTo(0, 0);
           }}
           />
+        </div>
       </div>
       }
     </div>

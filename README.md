@@ -10,6 +10,8 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+Production build: https://morningandevening.netlify.app/
+
 Experimenting with:
 
 - Next.js
