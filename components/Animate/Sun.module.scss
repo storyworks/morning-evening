@@ -1,6 +1,6 @@
 .sun {
   animation-name: spin;
-  animation-duration: 7500ms;
+  animation-duration: 20000ms;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
@@ -11,5 +11,309 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.ray {
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+$degrees: 0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165, 180, 195, 210, 225,
+  240, 255, 270, 285, 300, 315, 330, 345;
+
+@each $i in $degrees {
+  .ray#{$i} {
+    composes: ray;
+    animation-name: ray#{$i};
+  }
+}
+
+@keyframes ray0 {
+  0% {
+    d: path("M320 140V5");
+  }
+  50% {
+    d: path("M320 140V55");
+  }
+  100% {
+    d: path("M320 140V5");
+  }
+}
+
+@keyframes ray15 {
+  0% {
+    d: path("M367 148l12-44");
+  }
+  50% {
+    d: path("M367 148l36-132");
+  }
+  100% {
+    d: path("M367 148l12-44");
+  }
+}
+
+@keyframes ray30 {
+  0% {
+    d: path("M410 164l70-120");
+  }
+  50% {
+    d: path("M410 164l46.6-80");
+  }
+  100% {
+    d: path("M410 164l70-120");
+  }
+}
+
+@keyframes ray45 {
+  0% {
+    d: path("M447 193l32-32");
+  }
+  50% {
+    d: path("M447 193l96-96");
+  }
+  100% {
+    d: path("M447 193l32-32");
+  }
+}
+
+@keyframes ray60 {
+  0% {
+    d: path("M476 230l120-70");
+  }
+  50% {
+    d: path("M476 230l80-46.6");
+  }
+  100% {
+    d: path("M476 230l120-70");
+  }
+}
+
+@keyframes ray75 {
+  0% {
+    d: path("M492 273l44-12");
+  }
+  50% {
+    d: path("M492 273l132-36");
+  }
+  100% {
+    d: path("M492 273l44-12");
+  }
+}
+
+@keyframes ray90 {
+  0% {
+    d: path("M500 320H635");
+  }
+  50% {
+    d: path("M500 320H585");
+  }
+  100% {
+    d: path("M500 320H635");
+  }
+}
+
+@keyframes ray105 {
+  0% {
+    d: path("M492 367l44 12");
+  }
+  50% {
+    d: path("M492 367l132 36");
+  }
+  100% {
+    d: path("M492 367l44 12");
+  }
+}
+
+@keyframes ray120 {
+  0% {
+    d: path("M476 410l120 70");
+  }
+  50% {
+    d: path("M476 410l80 46.6");
+  }
+  100% {
+    d: path("M476 410l120 70");
+  }
+}
+
+@keyframes ray135 {
+  0% {
+    d: path("M447 447l32 32");
+  }
+  50% {
+    d: path("M447 447l96 96");
+  }
+  100% {
+    d: path("M447 447l32 32");
+  }
+}
+
+@keyframes ray150 {
+  0% {
+    d: path("M410 476l70 120");
+  }
+  50% {
+    d: path("M410 476l46.6 80");
+  }
+  100% {
+    d: path("M410 476l70 120");
+  }
+}
+
+@keyframes ray165 {
+  0% {
+    d: path("M367 492l12 44");
+  }
+  50% {
+    d: path("M367 492l36 132");
+  }
+  100% {
+    d: path("M367 492l12 44");
+  }
+}
+
+@keyframes ray180 {
+  0% {
+    d: path("M320 500V635");
+  }
+  50% {
+    d: path("M320 500V585");
+  }
+  100% {
+    d: path("M320 500V635");
+  }
+}
+
+@keyframes ray195 {
+  0% {
+    d: path("M273 492l-12 44");
+  }
+  50% {
+    d: path("M273 492l-36 132");
+  }
+  100% {
+    d: path("M273 492l-12 44");
+  }
+}
+
+@keyframes ray210 {
+  0% {
+    d: path("M230 476l-70 120");
+  }
+  50% {
+    d: path("M230 476l-46.6 80");
+  }
+  100% {
+    d: path("M230 476l-70 120");
+  }
+}
+
+@keyframes ray225 {
+  0% {
+    d: path("M193 447l-32 32");
+  }
+  50% {
+    d: path("M193 447l-96 96");
+  }
+  100% {
+    d: path("M193 447l-32 32");
+  }
+}
+
+@keyframes ray240 {
+  0% {
+    d: path("M164 410l-120 70");
+  }
+  50% {
+    d: path("M164 410l-80 46.6");
+  }
+  100% {
+    d: path("M164 410l-120 70");
+  }
+}
+
+@keyframes ray255 {
+  0% {
+    d: path("M148 367l-44 12");
+  }
+  50% {
+    d: path("M148 367l-132 36");
+  }
+  100% {
+    d: path("M148 367l-44 12");
+  }
+}
+
+@keyframes ray270 {
+  0% {
+    d: path("M140 320H5");
+  }
+  50% {
+    d: path("M140 320H55");
+  }
+  100% {
+    d: path("M140 320H5");
+  }
+}
+
+@keyframes ray285 {
+  0% {
+    d: path("M148 272l-44-12");
+  }
+  50% {
+    d: path("M148 272l-132-36");
+  }
+  100% {
+    d: path("M148 272l-44-12");
+  }
+}
+
+@keyframes ray300 {
+  0% {
+    d: path("M164 230l-120-70");
+  }
+  50% {
+    d: path("M164 230l-80-46.6");
+  }
+  100% {
+    d: path("M164 230l-120-70");
+  }
+}
+
+@keyframes ray315 {
+  0% {
+    d: path("M193 193l-32-32");
+  }
+  50% {
+    d: path("M193 193l-96-96");
+  }
+  100% {
+    d: path("M193 193l-32-32");
+  }
+}
+
+@keyframes ray330 {
+  0% {
+    d: path("M230 164l-70-120");
+  }
+  50% {
+    d: path("M230 164l-46.6-80");
+  }
+  100% {
+    d: path("M230 164l-70-120");
+  }
+}
+
+@keyframes ray345 {
+  0% {
+    d: path("M273 148l-12-44");
+  }
+  50% {
+    d: path("M273 148l-36-132");
+  }
+  100% {
+    d: path("M273 148l-12-44");
   }
 }

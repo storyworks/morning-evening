@@ -27,7 +27,7 @@ export default function Home() {
         <title>Morning & Evening</title>
       </Head>
       <h1 className={utilStyles.headingMega}>Morning & Evening</h1>
-      <Sun size={80} stroke={utilStyles.yellow}/>
+      <Sun size={500} stroke={utilStyles.yellow}/>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Devotional</h2>
         <p className={utilStyles.headingMd}>
