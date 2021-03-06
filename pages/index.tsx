@@ -2,10 +2,10 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 
-import {Layout, siteTitle } from "@components/index";
+import { Layout } from "@components/index";
 import Sun from "@components/Animate/Sun"
 import { getAllDevoIds } from "./api/data";
-import utilStyles from "@styles/utils.module.css";
+import utilStyles from "@styles/utils.module.scss";
 
 export const getStaticProps: GetStaticProps = async () => {
   const devotionals = getAllDevoIds();
@@ -16,7 +16,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-export default function Home({ devotionals }) {
+export default function Home() {
   const date: any = new Date();
   const startOfYear: any = new Date(date.getFullYear(), 0, 1);
   const dayOfYear = Math.round((date - startOfYear) / (1000 * 60 * 60 * 24)+1);
@@ -24,12 +24,10 @@ export default function Home({ devotionals }) {
   return (
     <Layout home>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Morning & Evening</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <h1>Morning & Evening</h1>
-      </section>
-      <Sun className={utilStyles.sun} size={80} stroke={"#e5d895" }/>
+      <h1 className={utilStyles.headingMega}>Morning & Evening</h1>
+      <Sun size={80} stroke={utilStyles.yellow}/>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Devotional</h2>
         <p className={utilStyles.headingMd}>

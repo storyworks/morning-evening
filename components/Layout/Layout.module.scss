@@ -1,3 +1,5 @@
+@use '../../styles/utils.module.scss' as utils;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,32 +12,26 @@
 
 .containerDay {
   composes: container;
-  color: black;
-  background-color: white;
+  color: utils.$charcoal;
+  background-color: utils.$white;
 }
 
 .containerNight {
   composes: container;
-  color: white;
-  background-color: black;
+  color: utils.$white;
+  background-color: utils.$black;
 }
 
 .containerHome {
   composes: container;
-  background-color: #28517e;
-  color: #e5d895;
+  background-color: utils.$blue;
+  color: utils.$yellow;
 }
 
 .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-}
-
-.header {
-  display: flex;
-  flex-direction: column;
   align-items: center;
 }
 
@@ -46,14 +42,4 @@
   margin: 3rem 0 0;
   font-family: "Lora", serif;
   font-weight: 500;
-}
-
-.headerImage {
-  width: 6rem;
-  height: 6rem;
-}
-
-.headerHomeImage {
-  width: 8rem;
-  height: 8rem;
 }

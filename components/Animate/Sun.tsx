@@ -1,20 +1,21 @@
 import * as React from "react";
 
+import styles from "./Sun.module.scss";
+
 interface SunProps {
-    className: string;
     size: number;
     stroke: string;
 }
 
-const Sun = ({className, size, stroke} : SunProps) => {
+const Sun = ({size, stroke} : SunProps) => {
   return (
       <svg
-          className={className}
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      width={640}
+        className={styles.sun}
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        width={640}
         height={640}
-          viewBox={`0 0 ${640} ${640}`}
-          style={{width: `${size}`, height: `${size}`}}
+        viewBox={`0 0 ${640} ${640}`}
+        style={{width: `${size}`, height: `${size}`}}
     >
       <defs>
         <path
