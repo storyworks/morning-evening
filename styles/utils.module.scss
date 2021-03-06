@@ -1,7 +1,18 @@
-/* Headings */
+/* Colours */
+$yellow: #e2cbb5;
+$yellowHighlight: #ecdfd3;
+$blue: #046baf;
+$charcoal: #333;
+$white: #fff;
+$black: #000;
 
+:export {
+  yellow: $yellow;
+}
+
+/* Headings */
 .headingMega {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -9,7 +20,7 @@
 }
 
 .headingXl {
-  font-size: 2rem;
+  font-size: 2.5rem;
   line-height: 1.3;
   font-weight: 800;
   letter-spacing: -0.05rem;
@@ -25,15 +36,4 @@
 .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
-}
-
-/* Colours */
-$yellow: #e5d895;
-$blue: #28517e;
-$charcoal: #333;
-$white: #fff;
-$black: #000;
-
-:export {
-  yellow: $yellow;
 }

@@ -6,6 +6,7 @@ import { Layout } from "@components/index";
 import Sun from "@components/Animate/Sun"
 import { getAllDevoIds } from "./api/data";
 import utilStyles from "@styles/utils.module.scss";
+import styles from "./home.module.scss"
 
 export const getStaticProps: GetStaticProps = async () => {
   const devotionals = getAllDevoIds();
@@ -26,11 +27,14 @@ export default function Home() {
       <Head>
         <title>Morning & Evening</title>
       </Head>
-      <h1 className={utilStyles.headingMega}>Morning & Evening</h1>
-      <Sun size={500} stroke={utilStyles.yellow}/>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Devotional</h2>
-        <p className={utilStyles.headingMd}>
+      <section>
+        <h1 className={styles.coverTitle}>Morning & Evening</h1>
+        {/* <h2 className={styles.coverSubtitle}>Devotional</h2> */}
+      </section>
+        <Sun size={200} stroke={utilStyles.yellow} />
+      <section>
+        <h2 className={styles.coverSubtitle}>Charles Spurgeon</h2>
+        <p className={styles.coverStart}>
         <Link href={`/day/${dayOfYear}`}>
           Start
         </Link>

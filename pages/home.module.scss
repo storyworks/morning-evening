@@ -1,17 +1,27 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@use '../styles/utils.module.scss' as utils;
+
+.coverHeadings {
+  text-align: center;
+  color: utils.$yellow;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.coverTitle {
+  composes: headingMega;
+  composes: coverHeadings;
+}
+
+.coverSubtitle {
+  composes: headingLg;
+  composes: coverHeadings;
+}
+
+.coverStart {
+  composes: headingMd;
+  composes: coverHeadings;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: utils.$yellowHighlight;
+  }
 }
