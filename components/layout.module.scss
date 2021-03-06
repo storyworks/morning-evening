@@ -1,15 +1,36 @@
 .container {
-  max-width: 36rem;
-  padding: 1rem 1rem 6rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  padding: 6rem 5rem;
   font-family: "Literata", serif;
 }
 
-.containerDark {
-  max-width: 36rem;
-  padding: 1rem 1rem 6rem;
-  font-family: "Literata", serif;
+.containerDay {
+  composes: container;
+  color: black;
+  background-color: white;
+}
+
+.containerNight {
+  composes: container;
   color: white;
   background-color: black;
+}
+
+.containerHome {
+  composes: container;
+  background-color: #28517e;
+  color: #e5d895;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {

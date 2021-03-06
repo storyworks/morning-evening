@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 import Layout, { siteTitle } from "@components/layout";
+import Sun from "@components/Sun"
 import { getAllDevoIds } from "./api/data";
 import utilStyles from "@styles/utils.module.css";
 
@@ -26,17 +27,16 @@ export default function Home({ devotionals }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>Morning & Evening</p>
+        <h1>Morning & Evening</h1>
       </section>
+      <Sun className={utilStyles.sun} size={80} stroke={"#e5d895" }/>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Devotional</h2>
-        <ul className={utilStyles.list}>
-          <li className={utilStyles.listItem} key={0}>
-            <Link href={`/day/${dayOfYear}`}>
-              <a>Start</a>
-            </Link>
-          </li>
-        </ul>
+        <p className={utilStyles.headingMd}>
+        <Link href={`/day/${dayOfYear}`}>
+          Start
+        </Link>
+        </p>
       </section>
     </Layout>
   );

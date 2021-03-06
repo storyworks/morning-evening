@@ -38,9 +38,7 @@ export default function Devo({ daily }) {
   }, [isEvening])
 
   return (
-     <Layout isDark={isEvening} setDark={setEvening}>
-        <div style={{ margin: "0rem 1rem" }}>
-      
+     <Layout isDark={isEvening} setDark={setEvening}>      
         <Head>
           <title>{`Day ${daily.day}`}</title>
         </Head>
@@ -56,10 +54,6 @@ export default function Devo({ daily }) {
               .processSync(devo.body).result
             }
         </div>
-      </div>
-        
-
-      
       </Layout>
   );
 }

@@ -10,7 +10,7 @@ export const siteTitle = "Next.js Sample Website";
 
 const Layout = ({ home = false, children, isDark = false, setDark = undefined}) => {
   return (
-    <div className={`${isDark ? styles.containerDark : styles.container}`}>
+    <div className={`${home ? styles.containerHome : isDark ? styles.containerNight : styles.containerDay}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -29,35 +29,9 @@ const Layout = ({ home = false, children, isDark = false, setDark = undefined}) 
         <link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,300;0,400;1,300;1,400&family=Lora:ital,wght@0,500;1,500&display=swap" rel="stylesheet" />
       </Head>
       <header className={styles.header}>
-        {/* {home ? (
-          <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
-            </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/">
-                <a className={utilStyles.colorInherit}>{name}</a>
-              </Link>
-            </h2>
-          </>
-        )} */}
+
       </header>
-      <main>{children}</main>
+      <main className={styles.main}>{children}</main>
       {!home && 
         <div className={styles.footer}>
           <Link href="/">
