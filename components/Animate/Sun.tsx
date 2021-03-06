@@ -57,7 +57,7 @@ const Sun = ({ size, stroke }: SunProps) => {
         xlinkHref="#Sun_circle"
         fill="#28517e"
         stroke={`${stroke}`}
-        strokeWidth={9}
+        strokeWidth={15}
       />
       <use
         xlinkHref="#Sun_0"
